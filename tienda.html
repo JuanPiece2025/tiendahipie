@@ -136,25 +136,25 @@
             text-decoration: underline;
         }
 
-        /* Estilos para el modal de pago */
+        /* Estilos para el modal de pago (los vamos a dejar por ahora, pero ya no se usarán) */
         .modal {
-            display: none; /* Inicialmente oculto */
-            position: fixed; /* Se queda en su lugar */
-            z-index: 1; /* Por encima de otros elementos */
+            display: none;
+            position: fixed;
+            z-index: 1;
             left: 0;
             top: 0;
-            width: 100%; /* Ancho completo */
-            height: 100%; /* Altura completa */
-            overflow: auto; /* Habilitar scroll si el contenido es largo */
-            background-color: rgba(0,0,0,0.4); /* Fondo oscuro semitransparente */
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
         }
 
         .modal-content {
             background-color: #fefefe;
-            margin: 15% auto; /* Centrar en la pantalla */
+            margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%; /* Ancho deseado del modal */
+            width: 80%;
             border-radius: 8px;
             position: relative;
         }
@@ -213,22 +213,22 @@
         <h1>Nuestros Productos</h1>
         <div class="productos-grid">
             <div class="producto">
-                <img src="images/producto.jpg" alt="Producto 1">
+                <img src="imagenes/producto_ejemplo1.jpg" alt="Producto 1">
                 <h3>Producto Ejemplo 1</h3>
                 <p class="precio">$19.99</p>
-                <button class="button">Comprar</button>
+                <a href="https://forms.gle/9hDvT9JdQVSFSkrCA" class="button" target="_blank">Comprar</a>
             </div>
             <div class="producto">
-                <img src="images/producto.jpg" alt="Producto 2">
+                <img src="imagenes/producto_ejemplo2.jpg" alt="Producto 2">
                 <h3>Producto Ejemplo 2</h3>
                 <p class="precio">$29.99</p>
-                <button class="button">Comprar</button>
+                <a href="https://forms.gle/9hDvT9JdQVSFSkrCA" class="button" target="_blank">Comprar</a>
             </div>
             <div class="producto">
-                <img src="images/producto.jpg" alt="Producto 3">
+                <img src="imagenes/producto_ejemplo3.jpg" alt="Producto 3">
                 <h3>Producto Ejemplo 3</h3>
                 <p class="precio">$9.99</p>
-                <button class="button">Comprar</button>
+                <a href="https://forms.gle/9hDvT9JdQVSFSkrCA" class="button" target="_blank">Comprar</a>
             </div>
             </div>
     </main>
@@ -245,52 +245,5 @@
         </div>
     </footer>
 
-    <div id="paymentModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Información de Pago</h2>
-            <p>Selecciona tu método de pago:</p>
-            <button class="payment-button">Métodos de Pago</button>
-            <div id="paymentInfo" style="margin-top: 20px;">
-                <p>Serás redirigido a una página segura para completar tu pago.</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Obtener todos los botones de "Comprar"
-        const buyButtons = document.querySelectorAll('.producto .button');
-        // Obtener el modal
-        const modal = document.getElementById('paymentModal');
-        // Obtener el botón de cerrar
-        const closeButton = document.querySelector('.close-button');
-        // Obtener el botón de métodos de pago (simulado)
-        const paymentButton = document.querySelector('.payment-button');
-
-        // Añadir un evento de clic a cada botón de "Comprar"
-        buyButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                modal.style.display = "block"; // Mostrar el modal
-            });
-        });
-
-        // Añadir un evento de clic al botón de cerrar
-        closeButton.addEventListener('click', () => {
-            modal.style.display = "none"; // Ocultar el modal
-        });
-
-        // Cerrar el modal si el usuario hace clic fuera de él
-        window.addEventListener('click', (event) => {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        });
-
-        // Simulación de acción al hacer clic en "Métodos de Pago"
-        paymentButton.addEventListener('click', () => {
-            alert('Simulando la redirección a la página de pago...');
-            // Aquí iría la lógica real para redirigir a la pasarela de pagos
-        });
-    </script>
-</body>
+    </body>
 </html>
