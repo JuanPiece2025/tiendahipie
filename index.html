@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            background-image: url('images/fondo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            box-sizing: border-box;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            transition: transform 0.2s ease-in-out; /* Animación de escala */
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Se expande un poco al pasar el mouse */
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            font-size: 1.5em;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out; /* Animaciones */
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px); /* Se eleva un poco */
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #555;
+            background-color: rgba(248, 248, 248, 0.8);
+            border-top: 1px solid #eee;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.2s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Descubre nuestra increíble tienda!</h1>
+        <a href="tienda.html" class="button">Ir a la Tienda <i class="fas fa-shopping-cart"></i></a>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mi Tienda Online. Todos los derechos reservados.</p>
+        <a href="contacto.html">Contacto</a>
+        <a href="terminos.html">Términos y Condiciones</a>
+    </footer>
+</body>
+</html>
